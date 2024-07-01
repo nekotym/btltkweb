@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="../logoas.png" />
+    <title>Payment</title>
+    <link rel="stylesheet" href="../css/shop.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+  </head>
+  <body id="back" class="payment">
+    <section id="header">
+      <a href="index.html"
+        ><img src="../mayra_img/images/logo.png" alt="" class="logo"
+      /></a>
+      <div>
+        <ul id="nav">
+          <li>
+            <a href="../index.html">Home <i class="fas fa-home"></i></a>
+          </li>
+          <li>
+            <a href="../html/contact.html"
+              >Contact <i class="fas fa-phone"></i
+            ></a>
+          </li>
+          <li>
+            <a href="../html/shop.html"
+              >Shop <i class="fas fa-shopping-basket"></i
+            ></a>
+          </li>
+          <li>
+            <a href="../html/about.html"
+              >About <i class="far fa-address-card"></i
+            ></a>
+          </li>
+          <li class="account">
+            <a href="../html/login.html"
+              >Login <i class="far fa-user-circle"></i
+            ></a>
+          </li>
+          <li class="profile">
+            <a href="../html/user.html"
+              >User <i class="far fa-user-circle"></i
+            ></a>
+          </li>
+          <li class="iconShopping">
+            <a href="../html/cart.html">
+              <p>0</p>
+              <i class="fas fa-shopping-cart" class="cart-icon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--body-->
+    <div class="body payment">
+      <section id="page_header" class="payment_header">
+        <h2>Payment</h2>
+      </section>
+      <div class="in4mation">CUSTOMER INFORMATION</div>
+      <section id="payment" class="section-p1">
+        <form name="payment">
+          <div class="form-field">
+            <input type="text" class="form-input" id="name" placeholder=" " />
+            <label for="name" class="form-label">Name</label
+            ><span
+              title="Nhap ho va ten"
+              style="color: red; font-size: 20px; margin-left: 5px"
+              >*</span
+            >
+          </div>
+          <div class="form-field">
+            <input type="tel" class="form-input" id="number" placeholder=" " />
+            <label for="number" class="form-label">Phone</label
+            ><span
+              title="Nhap so dien thoai"
+              style="color: red; font-size: 20px; margin-left: 5px"
+              >*</span
+            >
+          </div>
+          <div class="form-field">
+            <input type="email" class="form-input" id="email" placeholder=" " />
+            <label for="email" class="form-label">Email</label
+            ><span
+              title="Nhap email"
+              style="color: red; font-size: 20px; margin-left: 5px"
+              >*</span
+            >
+          </div>
+          <div class="form-field">
+            <input
+              type="text"
+              class="form-input"
+              id="address"
+              placeholder=" "
+            /><label for="address" class="form-label">Address</label
+            ><span
+              title="Nhap dia chi"
+              style="color: red; font-size: 20px; margin-left: 5px"
+              >*</span
+            >
+          </div>
+          <div class="form-field">
+            <input
+              type="text"
+              class="form-input"
+              id="note"
+              placeholder=" "
+            /><label for="note" class="form-label">Note</label>
+          </div>
+        </form>
+        <div class="price">
+          <table id="price">
+            <tr>
+              <td>Checkout</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="cart-total-title"><strong>Total</strong></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong><div class="sub-total-price">$0.00</div></strong>
+              </td>
+            </tr>
+            <tr>
+              <td class="payment"><strong>Payment method</strong></td>
+            </tr>
+            <form name="price">
+              <tr>
+                <td>
+                  <div class="standard">
+                    <input
+                      type="radio"
+                      name="pay"
+                      id="cash"
+                      value="cash"
+                    />Payment in cash
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="express">
+                    <input
+                      type="radio"
+                      name="pay"
+                      id="banking"
+                      value="banking"
+                    />Online Banking
+                    <div>
+                      <input
+                        type="text"
+                        class="stk"
+                        id="stk"
+                        placeholder="Input your account number "
+                      />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </form>
+
+            <tr>
+              <td>
+                <div>
+                  <button class="normal payment" onclick="inFormation()">
+                    Pay
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </div>
+    <footer class="section-p1">
+      <div class="col">
+        <img src="../pay/logo.png" alt="" />
+        <h4>Contact</h4>
+        <p><strong>Address:</strong> 179 Van Giang, Hung Yen, Viet Nam</p>
+        <p><strong>Phone:</strong> +84 0123 456 JQK/ (+84) 0987 654 QKA</p>
+        <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+        <div class="follow">
+          <h4>Follow us</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Term & Conditions</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Whitelist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+      <div class="col install">
+        <h4></h4>
+        <p></p>
+        <div class="row">
+          <img src="../pay/app.jpg" alt="" />
+          <img src="../pay/play.jpg" alt="" />
+        </div>
+        <p>Sercured Payment Gateways</p>
+        <img src="../pay/pay.png" alt="" />
+      </div>
+      <div class="copyright">
+        <p>© 2022 Le Nguyen Duc Anh 10121739 101211</p>
+      </div>
+    </footer>
+    <script src="../js/cart.js" async></script>
+    <script src="../js/loginsignup.js"></script>
+    <script src="../js/payment.js"></script>
+  </body>
+</html>

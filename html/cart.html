@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="../css/shop.css" />
+    <link rel="shortcut icon" type="image/png" href="../logoas.png" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+  </head>
+  <body id="back" class="cart" onload="render()">
+    <section id="header">
+      <a href="index.html"
+        ><img src="../mayra_img/images/logo.png" alt="" class="logo"
+      /></a>
+      <div>
+        <ul id="nav">
+          <li>
+            <a href="../index.html">Home <i class="fas fa-home"></i></a>
+          </li>
+          <li>
+            <a href="../html/contact.html"
+              >Contact <i class="fas fa-phone"></i
+            ></a>
+          </li>
+          <li>
+            <a href="../html/shop.html"
+              >Shop <i class="fas fa-shopping-basket"></i
+            ></a>
+          </li>
+          <li>
+            <a href="../html/about.html"
+              >About <i class="far fa-address-card"></i
+            ></a>
+          </li>
+          <li class="account">
+            <a href="../html/login.html"
+              >Login <i class="far fa-user-circle"></i
+            ></a>
+          </li>
+          <li class="profile">
+            <a href="../html/user.html"
+              >User <i class="far fa-user-circle"></i
+            ></a>
+          </li>
+          <li class="iconShopping">
+            <a href="../html/cart.html" class="active">
+              <p>0</p>
+              <i class="fas fa-shopping-cart" class="cart-icon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--body-->
+    <section class="body cart">
+      <section id="page_header" class="cart_header">
+        <h2>Shopping Cart</h2>
+      </section>
+      <section id="cart" class="section-p1">
+        <table width="100%">
+          <!-- <thead>
+            <tr>
+              <td>Image</td>
+              <td>Product</td>
+              <td>Quantity</td>
+              <td>Price</td>
+              <td>
+                <button class="remove-all" onclick="removeAllItem()">
+                  Remove All
+                </button>
+              </td>
+            </tr>
+          </thead>
+          `; -->
+        </table>
+      </section>
+      <section id="cart-add" class="section-p1">
+        <div id="coupon">
+          <h3>Apply Coupon</h3>
+          <div>
+            <select class="coupon-input">
+              <option select="selected" value="none">Enter Your Coupon</option>
+              <option value="FA-50%">FA-50%</option>
+            </select>
+            <!-- <input
+              type="text"
+              class="coupon-input"
+              placeholder="Enter Your Coupon"
+            /> -->
+            <button class="normal" type="button" onclick="couponApply()">
+              Apply
+            </button>
+          </div>
+        </div>
+        <div id="subtotal">
+          <h3 class="cart-title">Cart Totals</h3>
+          <table>
+            <tr>
+              <td class="coupon-title">Coupon</td>
+              <td class="coupon-value">None</td>
+            </tr>
+            <tr>
+              <td>Shipping</td>
+              <td>Free</td>
+            </tr>
+            <tr>
+              <td class="cart-total-title"><strong>Total</strong></td>
+              <td><strong class="cart-total-price">$0.00</strong></td>
+            </tr>
+          </table>
+          <button class="normal" onclick="checkout()">
+            Proceed to Checkout
+          </button>
+        </div>
+      </section>
+    </section>
+    <footer class="section-p1">
+      <div class="col">
+        <img src="../pay/logo.png" alt="" />
+        <h4>Contact</h4>
+        <p><strong>Address:</strong> 179 Van Giang, Hung Yen, Viet Nam</p>
+        <p><strong>Phone:</strong> +84 0123 456 JQK/ (+84) 0987 654 QKA</p>
+        <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+        <div class="follow">
+          <h4>Follow us</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Term & Conditions</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Whitelist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+      <div class="col install">
+        <h4></h4>
+        <p></p>
+        <div class="row">
+          <img src="../pay/app.jpg" alt="" />
+          <img src="../pay/play.jpg" alt="" />
+        </div>
+        <p>Sercured Payment Gateways</p>
+        <img src="../pay/pay.png" alt="" />
+      </div>
+      <div class="copyright">
+        <p>© 2022 Le Nguyen Duc Anh 10121739 101211</p>
+      </div>
+    </footer>
+    <script src="../js/cart.js" async></script>
+    <script src="../js/loginsignup.js"></script>
+  </body>
+</html>

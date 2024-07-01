@@ -1,0 +1,153 @@
+<html>
+  <head>
+    <title>Sale receipt</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 1000px;
+        margin: auto;
+      }
+      h1 {
+        padding-top: 5px;
+      }
+      table {
+        margin-top: 15px;
+        width: 100%;
+        border: 1px solid;
+      }
+
+      img {
+        height: 200px;
+        width: 200px;
+      }
+      .DVBH {
+        font-weight: bold;
+        padding-top: 25px;
+      }
+      .strO {
+        font-weight: bold;
+        padding-top: 5px;
+      }
+      .tax {
+        padding-top: 5px;
+      }
+      .addr {
+        padding-top: 5px;
+        text-transform: capitalize;
+      }
+      .phone {
+        padding-top: 5px;
+      }
+      .stk {
+        padding-top: 5px;
+      }
+      .nguoimua {
+        padding-top: 5px;
+        font-weight: bold;
+      }
+      .email {
+        padding-top: 5px;
+      }
+      .note {
+        padding-top: 5px;
+      }
+      .payment {
+        padding-top: 5px;
+      }
+      .total-price {
+        text-align: center;
+      }
+      .sig {
+        padding-top: 50px;
+        margin-left: 800px;
+        font-weight: bold;
+      }
+      .note-sign {
+        padding-top: 10px;
+        margin-left: 790px;
+        font-style: italic;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <!-- <body onload="window.print();window.close()"> -->
+  <body>
+    <img
+      style="width: 144px; height: 91px; border: 1px solid"
+      src="mayra_img/images/black-logo.png"
+      alt=""
+    />
+    <section style="text-align: center">
+      <h1>SALE RECEIPT</h1>
+      <div>(Electronic bill)</div>
+      <div class="ngay">
+        <p id="date"></p>
+        <script>
+          n = new Date();
+
+          y = n.getFullYear();
+          m = n.getMonth() + 1;
+          d = n.getDate();
+          document.getElementById("date").innerHTML =
+            "Hung Yen,  " + d + "/" + m + "/" + y;
+        </script>
+      </div>
+    </section>
+    <div class="DVBH">Store: ANH STORE</div>
+    <div class="strO">Store Owner: Lê Nguyễn Đức Anh</div>
+    <div class="tax">Tax Identification Number: 0123456772003</div>
+    <div class="addr">Address: 179 Van Giang, Hung Yen, Viet Nam</div>
+    <div class="phone">Phone number: 101211-10121739</div>
+    <div class="stk">Account Number: 0723456772003</div>
+
+    <div class="nguoimua">Buyer: ${daylaten}</div>
+    <div class="phone">Phone number: ${daylasdt}</div>
+    <div class="email">Email: ${day la email}</div>
+    <div class="addr">Address: ${day la dia chi}</div>
+    <div class="note">Note: ${day la note}</div>
+    <div class="payment">Payment Method: ${hinh thuc thanh toan}</div>
+    <div class="stk">Account Number: ${day la so tai khoan}</div>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <td>ID</td>
+          <td>Image</td>
+          <td>Quantity</td>
+          <td>Product</td>
+          <td>Price</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><img src="../imgpro/1.1.png" alt="" /></td>
+          <td>1</td>
+          <td>Nendoroid Miss Fortune</td>
+          <td>$100</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><img src="../imgpro/1.1.png" alt="" /></td>
+          <td>1</td>
+          <td>Nendoroid Miss Fortune</td>
+          <td>$100</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="total-price">Coupon</td>
+          <td>$1000</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="total-price">Total Price</td>
+          <td>$1000</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="sig">Shop's signature</div>
+    <div class="note-sign">(Sign and write full name)</div>
+  </body>
+</html>

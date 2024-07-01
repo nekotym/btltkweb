@@ -1,0 +1,420 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Popins", sans-serif;
+  user-select: none;
+}
+body::-webkit-scrollbar {
+  width: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  cursor: pointer;
+  position: relative;
+  padding: 5px 14px;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  transition: 0.4s;
+}
+button:hover {
+  z-index: 1;
+  border-color: transparent;
+  background: linear-gradient(
+    90deg,
+    #f9d923,
+    #00a19d,
+    #0c87b7,
+    #cb49ff,
+    #ff6666,
+    #f9d923
+  );
+  background-size: 400%;
+  box-shadow: 0 0 15px rgb(2, 4, 24);
+  animation: glow 12s linear forwards;
+}
+@keyframes glow {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 400%;
+  }
+}
+button::before {
+  content: "";
+  top: -1;
+  left: -1;
+  right: -1;
+  bottom: -1;
+  position: absolute;
+  background: inherit;
+  filter: blur(36px);
+  z-index: -1;
+  opacity: 0;
+  transition: 0.4s ease-out;
+}
+button:hover::before {
+  opacity: 1;
+  z-index: -1;
+}
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+.section-p1 {
+  padding: 40px 80px;
+}
+.section-m1 {
+  padding: 40px 0;
+}
+#back {
+  background-image: url("../mayra_img/images/00_Forest_WEB_HEADER.jpg");
+  background-size: cover;
+}
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+#nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px 0;
+}
+.logo {
+  width: 120px;
+  cursor: pointer;
+}
+.cart-icon {
+  width: 30px;
+  cursor: pointer;
+}
+
+#nav li {
+  padding: 0 20px;
+  list-style: none;
+}
+#nav li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  position: relative;
+}
+#nav li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(255, 255, 255);
+  transition: width 0.3s;
+  border-radius: 2px;
+}
+#nav li a:hover::after {
+  width: 100%;
+}
+#nav li a.active::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+}
+#nav a p {
+  position: absolute;
+  top: 8px;
+  right: -25px;
+  font-size: 15px;
+  border: #000 solid;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  background-color: #000;
+}
+#nav li.account.on {
+  display: none;
+}
+#nav li.profile {
+  display: none;
+}
+#nav li.profile.on {
+  display: inline-block;
+}
+
+/*body*/
+.body {
+  background-color: rgba(255, 255, 255, 0.781);
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+#page_header {
+  background-image: url("../background/akali.png");
+  width: 100%;
+  height: 30vh;
+  background-size: cover;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 14px;
+  display: flex;
+}
+#page_header h2 {
+  line-height: 160px;
+  margin-left: -10px;
+  font-size: 100px;
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+  background-image: url("../mayra_img/images/back.png");
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+}
+@keyframes back {
+  100% {
+    background-position: 2000px 0;
+  }
+}
+/*icon*/
+.social-icon {
+  position: absolute;
+  right: 5%;
+  bottom: 8%;
+}
+.social-icon img {
+  width: 25px;
+  display: block;
+  margin: 25px 5px;
+}
+
+footer {
+  height: 30vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: white;
+}
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+footer .logo {
+  margin-bottom: 30px;
+}
+footer h4 {
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+footer p {
+  font-size: 13px;
+  color: #222;
+  margin: 0 0 8px 0;
+}
+footer a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
+}
+footer .follow i {
+  color: #464646;
+  padding-right: 4px;
+  cursor: pointer;
+}
+footer .install .row img {
+  border: 1px solid rgb(134, 23, 56);
+  border-radius: 6px;
+}
+footer .install img {
+  margin: 10px 0 15px 0;
+}
+footer .follow i:hover,
+footer a:hover {
+  color: rgb(134, 23, 56);
+}
+footer .copyright {
+  width: 100%;
+  text-align: center;
+}
+nav ul li.account.on {
+  display: none;
+}
+nav ul li.profile {
+  display: none;
+}
+nav ul li.profile.on {
+  display: inline-block;
+}
+#user-name .pro5 {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+#user-name .pro5 .border {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  z-index: 100;
+}
+#user-name .pro5 .box {
+  position: relative;
+  background-color: rgb(2, 2, 2);
+  border-radius: 50%;
+  height: 185px;
+  width: 185px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  overflow: hidden;
+}
+#user-name .pro5 .box::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 140%;
+  background-image: linear-gradient(
+    #ff0000,
+    #d400d4,
+    #0004ff,
+    #00ffff,
+    #ffffff
+  );
+  animation: animate 4s linear infinite;
+}
+#user-name .pro5 .box::after {
+  content: "";
+  position: absolute;
+  inset: 15px;
+  background-color: #222;
+  border-radius: 50%;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#user-name .pro5 .img {
+  position: absolute;
+  border-radius: 50%;
+  background-color: black;
+}
+#user-name .pro5 img {
+  height: 165px;
+  width: 165px;
+}
+#user-name table {
+  margin-top: 50px;
+  width: 100%;
+  font-size: 15px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+  text-align: center;
+}
+#user-name button.log-out {
+  margin-top: 50px;
+  border-radius: 5px;
+  border: none;
+  height: 40px;
+  width: 150px;
+
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  left: 85%;
+}
+
+#user-name table td {
+  cursor: pointer;
+}
+
+#user-name table td.trName {
+  float: left;
+
+  color: rgb(126, 126, 126);
+  cursor: unset;
+}
+#user-name table td.trUser {
+  float: left;
+
+  color: rgb(126, 126, 126);
+  cursor: unset;
+}
+#user-name table td.trEmail {
+  float: left;
+  color: rgb(126, 126, 126);
+  cursor: unset;
+}
+#user-name table td.trPhone {
+  float: left;
+
+  color: rgb(126, 126, 126);
+  cursor: unset;
+}
+#user-name table td.trAddress {
+  float: left;
+
+  color: rgb(126, 126, 126);
+  cursor: unset;
+}
+#user-name table td.tdName {
+  text-transform: uppercase;
+  text-align: center;
+}
+#user-name table td.tdAddress {
+  text-transform: capitalize;
+  border: 1px solid;
+}
+#user-name table tr td.edit {
+  width: 100px;
+  border: 1px solid;
+}
+#user-name table tr td.edit:hover {
+  color: red;
+}
